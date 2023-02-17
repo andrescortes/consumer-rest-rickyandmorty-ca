@@ -1,0 +1,14 @@
+dependencies {
+    implementation project(':model')
+
+    implementation 'org.springframework:spring-context'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+//    implementation 'io.micrometer:micrometer-core'
+
+    implementation('com.google.code.gson:gson')
+    implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}

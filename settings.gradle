@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        //mavenLocal()
+        //maven { url '...' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'consumer-rest'
+
+// applications
+include ':app-service'
+
+// domain
+include ':model'
+include ':usecase'
+
+// driven-adapters
+include ':rest-consumer'
+
+// entry-points
+include ':reactive-web'
+
+
+// shortcuts
+project(':app-service').projectDir = file('./applications/app-service')
+project(':model').projectDir = file('./domain/model')
+project(':usecase').projectDir = file('./domain/usecase')
+project(':rest-consumer').projectDir = file('./infrastructure/driven-adapters/rest-consumer')
+project(':reactive-web').projectDir = file('./infrastructure/entry-points/reactive-web')
